@@ -1,0 +1,6 @@
+name: abhishek
+database:
+  driverClass: com.mysql.jdbc.Driver
+  user: root
+  password:
+  url: jdbc:mysql://localhost:3306/book
