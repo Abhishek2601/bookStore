@@ -67,7 +67,7 @@ public class BookService {
         final List<Book> inputBooks;
         final List<Book> outputBooks;
         final User user;
-        
+
 
         public BookServicesRunnable(List<Book> input, List<Book> outputBooks, User user){
             this.inputBooks = input;
