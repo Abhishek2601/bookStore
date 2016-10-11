@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 /**
  * Created by root on 9/19/16.
  */
@@ -21,4 +23,6 @@ public class BookIssueEntity {
    // @JsonProperty("user_id")
     private int userId;
     private boolean Isreturn;
+    private Date issue_date;
+    private Date return_date;
 }

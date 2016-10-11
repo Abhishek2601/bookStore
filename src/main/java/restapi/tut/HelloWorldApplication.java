@@ -24,7 +24,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration>
         UserDao userdao = jdbi.onDemand(UserDao.class);
         BookIssueDao bookIssueDao = jdbi.onDemand(BookIssueDao.class);
         environment.jersey().register(new HelloWorldResource( helloWorldConfiguration.getName()));
-        environment.jersey().register(new BookApi(bookDao));
+        environment.jersey().register(new BookApi(bookDao,userdao));
         environment.jersey().register(new UserApi(userdao, bookDao, bookIssueDao));
     }
     public static void main(String [] args) throws  Exception

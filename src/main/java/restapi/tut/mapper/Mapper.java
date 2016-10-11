@@ -18,7 +18,7 @@ public class Mapper{
     {
         public Book map(int i, ResultSet resultSet, StatementContext statementContext) throws SQLException
         {
-        return new Book(resultSet.getInt("id"),resultSet.getString("name"), resultSet.getString("author"),resultSet.getInt("num"));
+        return new Book(resultSet.getInt("id"),resultSet.getString("name"), resultSet.getString("author"),resultSet.getInt("num"), resultSet.getString("type"));
         }
     }
 
@@ -42,6 +42,8 @@ public class Mapper{
                     .bookId(resultSet.getInt("book_id"))
                     .userId(resultSet.getInt("user_id"))
                     .Isreturn(resultSet.getBoolean("Isreturn"))
+                    .issue_date((resultSet.getDate("issue_date")))
+                    .return_date((resultSet.getDate("return_date")))
                     .build();
         }
 

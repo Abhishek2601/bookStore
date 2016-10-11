@@ -15,6 +15,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @EqualsAndHashCode(exclude = {"id","num","author"})
+@ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Book {
     @JsonProperty("id")
@@ -26,5 +27,8 @@ public class Book {
     private String author;
     @JsonProperty(value = "num")
     private Integer num;
+    @NotNull
+    @JsonProperty(value = "type", required = true)
+    private String type;
 
 }
